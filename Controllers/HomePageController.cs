@@ -5,12 +5,12 @@ public class HomePageController : Controller{
     
     public IActionResult Index()    
     {        
-        return Ok("This is the index of the HomeController");    
+        return Ok("This is the index of the HomePageController");    
     }
-    [RouteAttribute("quote")]
+    [RouteAttribute("index")]
     public IActionResult Quote()
     {
-        return Ok("This is the index of HomeQuoteController");
+        return Ok("This is the index of HomePageQuoteController");
     }
 
 }
