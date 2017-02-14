@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc; 
+using FisherInsurance.Models;
+
 [Route("customer")]
 public class CustomerCareController : Controller
 {
