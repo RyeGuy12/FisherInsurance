@@ -1,16 +1,17 @@
 using Microsoft.AspNetCore.Mvc; 
 [Route("life")]
-public class LifeController : Controller{
-
-    
+public class LifeController : Controller
+{    
+    [RouteAttribute("")]
     public IActionResult Index()    
     {        
-        return Ok("This is the index of the LifeController");    
+        //return Ok("This is the index of the HomePageController");    
+        return View();
     }
-    [RouteAttribute("quote")]
+    [RouteAttribute("index")]
     public IActionResult Quote()
     {
-        return Ok("This is the index of LifeQuoteController");
+        return Ok("This is the index of HomePageQuoteController");
     }
 
 }

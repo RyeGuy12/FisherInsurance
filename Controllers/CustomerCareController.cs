@@ -2,26 +2,14 @@ using Microsoft.AspNetCore.Mvc;
 [Route("customer")]
 public class CustomerCareController : Controller
 {
-    [HttpPost]        
-    public IActionResult Post([FromBody]string value)
-    {           
-         return Created("", value);        
+    public IActionResult Index()    
+    {        
+        return Ok("This is the index of the CustomerController");    
     }
-    [HttpGet("{id}")]
-    public IActionResult Get(int id)        
-    {           
-         return Ok("The id is: " + id);
-    }        
-    
-    [HttpPut("{id}")]        
-    public IActionResult Put(int id, [FromBody]string value)        
-    {            
-        return NoContent();        
-    }
-    [HttpDelete("{id}")]        
-    public IActionResult Delete(int id)        
-    {            
-        return Delete(id);        
+    [RouteAttribute("claims")]
+    public IActionResult Quote()
+    {
+        return Ok("This is the index of CustomerClaimsController");
     }
 
 }

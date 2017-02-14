@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.Mvc; 
-[Route("auto")]
+
+[RouteAttribute("auto")]
 public class AutoController : Controller
 {
-
+    [RouteAttribute("")]
     public IActionResult Index()    
-    {        
-        return Ok("This is the index of the AutoController");    
+    {           
+        return View();
     }
     [RouteAttribute("quote")]
     public IActionResult Quote()

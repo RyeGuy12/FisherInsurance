@@ -24,17 +24,10 @@ namespace FisherInsurance
         {
             loggerFactory.AddConsole();
 
+            //app.UseStaticFiles();
+
             app.UseMvcWithDefaultRoute();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
         }
     }
 }
